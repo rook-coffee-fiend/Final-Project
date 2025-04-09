@@ -1,0 +1,52 @@
+<Scroller
+	  {top}
+	  {threshold}
+	  {bottom}
+	  bind:count
+	  bind:index
+	  bind:offset
+	  bind:progress
+  >
+
+	<!-- the FIXED layer of the scroller -->
+	<!-- the margin here is a key way to determine overlay vs. side-by-side -->
+	<div slot="background" style="margin: 0 0 0 0;">
+		<h2>Background Layer</h2>
+		
+		<p>
+			Here you could use an <code>if</code> conditional to decide what
+			image to show in the background based on the value of <code>index</code>.
+		</p>
+		
+		<p>current section: <strong>{index + 1}/{count}</strong></p>
+		<progress value="{count ? (index + 1) / count : 0}"></progress>
+
+		<p>offset in current section: </p>
+		<progress value={offset || 0}></progress>
+
+		<p>total progress </p>
+		<progress value={progress || 0}></progress>
+		
+	</div>
+
+	<!-- the SCROLLING layer of the scroller -->
+	<!-- the padding here is a key way to determine overlay vs. side-by-side -->
+	<div slot="foreground" style="padding: 0 0 0 0;"> <!--basic unit-->
+		<section> <!--for code readability-->
+			<p>Scrolling Layer: section 1</p>
+		</section>
+		<section>
+			<p>Scrolling Layer: section 2</p>
+		</section>
+		<section>
+			<p>Scrolling Layer: section 3</p>
+		</section>
+		<section>
+			<p>Scrolling Layer: section 4</p>
+		</section>
+		<section>
+			<p>Scrolling Layer: section 5</p>
+		</section>
+	</div>
+
+</Scroller>

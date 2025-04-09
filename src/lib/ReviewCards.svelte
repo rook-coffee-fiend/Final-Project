@@ -1,5 +1,5 @@
 <script>
-	import {review} from './rewards.js';
+	import {reviews} from './reviews.js';
 	
 	let selected;
 	$:console.log(selected)
@@ -20,11 +20,11 @@
 
 
 <header>
-	<h1>Reviews!</h1>
+	<h1>Read some reviews!</h1>
 </header>
 
 <div class="row">
-	{#each review as {name, descr, img}, i}
+	{#each reviews as {name, descr, img}, i}
 		<div class="flip-box">
 			<div class="flip-box-inner" class:show-back={selected === i}>
 				<div class="flip-box-front card">
