@@ -1,80 +1,131 @@
-<script>
-  let num1 = "";
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  let num5 = 0;
+<script lang="ts">
+  let careType = "";
+  let meds = "";
+  let petCount = 0;
+  let behavior = "";
+  let nights = 0;
+  let visitsPerDay = "";
+  let days = 0;
+  let isHoliday = "";
   let sum = 0;
 
-  function addNumbers() {
-    if (num1 === 'overnights') {
-      // Apply overnight pricing logic
-    } else if (num1 === 'dropins') {
-      // Apply drop-in pricing logic
+  function calculateEstimate() {
+    let total = 0
+
+    //Care type breakdown! 
+    //Overnights calculation
+    if (careType ==='overnights') {
+      total += meds === 'yes' ? 5 : 0;
+      total += petCount > 2 ? 10 : 0;
+      total += behavior === 'yes' ? 5 : 0;
+      total += 50 * nights;
+      if (isHoliday === 'yes') {
+        total += 10 * nights;
+      }
     }
-    sum = Number(num1) + Number(num2)  + Number(num3) + Number(num4)+ Number(num5);
-    Math.floor(70);
+
+    //Drop-in calculation
+    else if (careType === 'dropins') {
+      total += meds === 'yes' ? 5 : 0;
+      total += petCount > 2 ? 10 : 0;
+      total += behavior === 'yes' ? 10 : 0;
+
+      let ratePerVisit = 0;
+      if (visitsPerDay === '1') ratePerVisit = 35;
+      else if (visitsPerDay === '2') ratePerVisit = 30;
+      else if (visitsPerDay === '3') ratePerVisit = 25;
+
+      total += ratePerVisit * days;
+      if (isHoliday === 'yes') {
+        total += 10 * days;
+      }
+    }
+
+    sum = total;
+    
   }
 </script>
 
 
-<!--<div>
-  <label for="num1">Would you prefer overnights, or drop-in visits?</label>  
-  <input type="number" id="num1" bind:value={num1}>
-</div>-->
 
+<!-- Type of Care -->
 <div>
-  <label for="num1">Would you prefer Overnights or Drop-in Visits?</label>  
-  <select id="num1" bind:value={num1}>
+  <label for="careType">Would you prefer to have overnights, or drop-in visits?</label>
+  <select id="careType" bind:value={careType}>
     <option value="" disabled selected>Select one</option>
     <option value="overnights">Overnights</option>
-    <option value="dropins">Drop-in Visits</option>
+    <option value="dropins">Drop-ins</option>
   </select>
 </div>
 
-<!--DO BUTTONS INSTEAD. Click on either Overnights or Drop-in Visits-->
-  <!--Overnights leads to: Medication yes/no: +5 vs +0 -->
-    <!--More than two animals yes/no: +10 vs +0 -->
-    <!--Aggression or behavioral needs yes/no: +5 vs +0 -->
+<!-- Common Fields -->
+{#if careType}
+  <div>
+    <label for="meds">Does your pet need medication administered- such as insulin injections, inhalers, or pills?</label>
+    <select id="meds" bind:value={meds}>
+      <option value="" disabled selected>Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
 
-    <!--How many nights? NUMBER-->
-  
-    <!--((sum)+50 * (# of nights))-->
+  <div>
+    <label for="petCount">How many pets do you have?</label>
+    <input id="petCount" type="number" min="1" bind:value={petCount} />
+  </div>
 
-
-  <!--Drop-ins leads to: Medication yes/no: +5 vs +0 -->
-    <!--More than two animals yes/no: +10 vs +0 -->
-    <!--Aggression or behavioral needs yes/no: +5 vs +0 -->
-
-    <!--How many drop-ins per day? (1=35; 2=30; 3=25)-->
-    <!--How many days? NUMBER-->
-  
-    <!--((sum)+(35 or 30 or 25) * (# of days))-->
-
-<!--AFTER EVERYTHING: Holiday? if yes, +10-->
-
-
-<div>
-  <label for="num2">How many pets do you have?</label>
-  <input type="select" id="num2" bind:value={num2}>
-    <!--if/else: 3+ = 10; <=2 = 0.-->
-
-</div>
-
-<div>
-  <label for="num3">Do any of your animals exhibit aggression? </label>
-    <!--if/else: yes = 5; no = 0-->
-  <input type="number" id="num3" bind:value={num3}>
-</div>
-
-<div>
-  <label for="num4">Do your critters require medication administration: such as pills, inhalers, insulin injections, etc.? </label>
-  <!--if/else: yes = 10; no = 0.-->
-  <input type="number" id="num4" bind:value={num4}>
-</div>
+  <div>
+    <label for="behavior">Does your pet exhibit aggression, pica compulsions, or other special-needs behaviors?</label>
+    <select id="behavior" bind:value={behavior}>
+      <option value="" disabled selected>Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+{/if}
 
 
-<button on:click={addNumbers}>Calculate</button>
+<!-- Overnight-Specific -->
+{#if careType === 'overnights'}
+  <div>
+    <label for="nights">How many nights do you need care for?</label>
+    <input id="nights" type="number" min="1" bind:value={nights} />
+  </div>
+{/if}
+
+<!-- Drop-in-Specific -->
+{#if careType === 'dropins'}
+  <div>
+    <label for="visitsPerDay">How many visits <strong>per day</strong> do you anticipate needing?</label>
+    <select id="visitsPerDay" bind:value={visitsPerDay}>
+      <option value="" disabled selected>Select</option>
+      <option value="1">1 visit per day ($35)</option>
+      <option value="2">2 visits per day ($30)</option>
+      <option value="3">3 visits per day ($25)</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="days">How many days of care do you need?</label>
+    <input id="days" type="number" min="1" bind:value={days} />
+  </div>
+{/if}
+
+
+<!-- Holiday -->
+{#if careType}
+  <div>
+    <label for="isHoliday">Do the dates of pet-care fall during during a busy season and/or holiday weekend?</label>
+    <select id="isHoliday" bind:value={isHoliday}>
+      <option value="" disabled selected>Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+{/if}
+
+
+<button on:click={calculateEstimate}>Calculate</button>
 
 <div>
   <p>Pet care estimate: ${sum}</p>
