@@ -1,177 +1,140 @@
 <script>
-	import {reviews} from './reviews.js';
-	
-	let selected;
-	$:console.log(selected)
-	
-	let cardBackShowing = false;
-	
-	const toggleBackFront = (e) => {
-		// if same card clicked twice to toggle front and back
-		if (selected === Number(e.target.dataset.cardId)) {
-			selected = null;
-			cardBackShowing = !cardBackShowing;
+	import { reviews } from './reviews.js';
+	let flippedCards = new Set();
+
+	//const reviews = Array.from({ length: 12 }, (_, i) => ({
+		//id: i,
+		//name: `Reviewer ${i + 1}`,
+		//descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+		//img: "https://via.placeholder.com/200x300"
+	//}));
+
+	function toggleCard(id) {
+		if (flippedCards.has(id)) {
+			flippedCards.delete(id);
 		} else {
-			cardBackShowing = !cardBackShowing;
-			selected = Number(e.target.dataset.cardId)
+			flippedCards.add(id);
 		}
+		flippedCards = new Set(flippedCards);
 	}
 </script>
 
+<h1>Read Some Reviews!</h1>
 
-<header>
-	<h1>Read some reviews!</h1>
-</header>
-
-<div class="row">
-	{#each reviews as {name, descr, img}, i}
-		<div class="flip-box">
-			<div class="flip-box-inner" class:show-back={selected === i}>
-				<div class="flip-box-front card">
-					<img src={img} alt={name}>
+<div class="grid">
+	{#each reviews as { id, name, descr, img, review }}
+		<button class="flip-box" on:click={() => toggleCard(id)} on:keydown={(e) => e.key === 'Enter' && toggleCard(id)} aria-label="Toggle review card">
+			<div class="flip-box-inner {flippedCards.has(id) ? 'show-back' : ''}">
+				<div class="flip-box-front">
+					<img src={img} alt="Review by {name}" />
 				</div>
 
-				<div class="flip-box-back container">
-					<h2>{name}</h2>
+				<div class="flip-box-back">
+					<h2>{name}:</h2>
 					<p>{descr}</p>
+					<p>{review}</p>
 				</div>
-			</div>
-			<!--<footer on:click={toggleBackFront} data-card-id={i}>{position}</footer>-->
-		</div>
-	{/each}
-</div>	
 
+			</div>
+		</button>
+	{/each}
+</div>
 
 <style>
 	h1 {
-		margin: 0 0 5px;
-	}
-	
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin-bottom: 10%;
-	}
-	/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-	.flip-box {
-		background-color: transparent;
-		width: 200px;
-		height: 310px;
-		margin: 0 20px 40px;
-		border: 1px solid #f1f1f1;
-		perspective: 1000px; /* Remove this if you don't want the 3D effect */
+		text-align: center;
+		margin-bottom: 1rem;
 	}
 
-	/* This container is needed to position the front and back side */
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr); /* max 4 cards per row */
+		grid-auto-rows: minmax(300px, auto); /* min height of 300px, auto height for larger content */
+		gap: 24px; /* consistent padding between cards */
+		justify-items: center;
+		padding: 0 1rem;
+	}
+
+	.flip-box {
+		width: 200px;
+		min-height: 300px;
+		perspective: 1000px;
+		cursor: pointer;
+		transition: height 0.4s ease;
+	}
+
+	/*.flip-box.expanded {
+		height: auto;
+	}*/
+
 	.flip-box-inner {
 		position: relative;
 		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: transform 0.8s;
+		min-height: 300px;
+		transition: transform 0.8s ease, height 0.4s ease;
 		transform-style: preserve-3d;
 	}
 
-	/* Do an horizontal flip when you move the mouse over the flip box container */
-/* 	.flip-box:hover .flip-box-inner {
+	.flip-box-inner.show-back {
 		transform: rotateY(180deg);
-	} */
-	
-	.show-back {
-		transform: rotateY(180deg);
+		/*height: auto;*/
 	}
 
-	/* Position the front and back side */
-	.flip-box-front, .flip-box-back {
+	.flip-box-front,
+	.flip-box-back {
 		position: absolute;
 		width: 100%;
-		height: 100%;
-		-webkit-backface-visibility: hidden; /* Safari */
+		min-height: 300px;
 		backface-visibility: hidden;
+		border-radius: 8px;
+		box-shadow: 4px 8px 16px rgb(221, 159, 177);
+		overflow: hidden;
 	}
 
-	/* Style the front side */
 	.flip-box-front {
-		background-color: #000;
+		background: rgb(185, 215, 223);
 	}
 
-	/* Style the back side */
+	.flip-box-front img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	.flip-box-back {
+		background-color: #75ba8c;
+		color: black;
+		transform: rotateY(180deg);
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		background-color: black;
-		color: white;
-		width: 196px;
-		height: 300px;
-		transform: rotateY(180deg) translateX(6px);
-	}
-
-
-	img {
-		max-height: 100%;
-
-	}	
-
-/*	footer { 
-		width: 200px;
-		font-weight: 800;
-		padding: 5px 2px;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
 		text-align: center;
-		border: 1px solid darkgray;
-		border-top: 1px solid black;
- 		box-shadow: 0 0 2px black; 
-		cursor: pointer;
-		transition: .3s all;
-	} 
-	
-	footer:hover {
-		color: #fff;
-		background-color: #000;
-		border: 1px solid black;
 	}
-	
-	footer:active {
-		color: #000;
-		background-color: #888
-	}*/
 
-		/* Three columns side by side */
-	/* .column {
-		float: left;
-		width: 33.3%;
-		margin-bottom: 16px;
-		padding: 0 8px;
-	} */
+	.flip-box-back h2 {
+		margin: 0;
+	}
 
-	/* Display the columns below each other instead of side by side on small screens */
-	/* @media screen and (max-width: 650px) {
-		.column {
-			width: 100%;
-			display: block;
+	.flip-box-back p {
+		margin: 0.5rem 0 0;
+	}
+
+	/* Responsiveness - max 4 down to 1 */
+	@media (max-width: 1100px) {
+		.grid {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
-	 */
-	/* Add some shadows to create a card effect */
-	.card {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	@media (max-width: 800px) {
+		.grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
-
-	/* Some left and right padding inside the container */
-	.container {
-		padding: 5px;
+	@media (max-width: 500px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
 	}
-
-	/* Clear floats */
-/* 	.container::after, .row::after {
-		content: "";
-		clear: both;
-		display: table;
-	} */
-	
-	h2 {
-		margin: 5px 0 0 0;
-	}	
-
 </style>

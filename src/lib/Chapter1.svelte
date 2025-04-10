@@ -2,12 +2,15 @@
     import Scroller from './scrolly.svelte';
     import MapInfo from './MapInfo.svelte';
     import CalculatorFunction from './CalculatorFunction.svelte';
+    import NavBar from './NavBar.svelte';
 
 </script>
 
 <article>
 
 	<h1>Cats and Community in Jamaica Plain</h1>
+
+	
 
 	<p>
 		Lorem ipsum dolor sit amet. Et cumque molestias qui amet alias ex porro minima qui delectus dolores in repudiandae tempora quo corporis 
@@ -19,6 +22,7 @@
 	</p>
 
 	<Scroller/>
+	
 	<section id="scrolly">
 		<div class="step-image" data-step="1">
       		<img src="Domino.jpg" alt="A girl smiles while she snuggles with a black cat" class="step-image"/>

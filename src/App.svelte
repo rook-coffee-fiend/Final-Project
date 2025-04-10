@@ -1,6 +1,7 @@
 <script>
   import Chapter1 from './lib/Chapter1.svelte';
   import Chapter2 from './lib/Chapter2.svelte';
+  import NavBar from './lib/NavBar.svelte';
 
 
   const pages = [
@@ -18,13 +19,28 @@
 	let threshold = 0.5; // how far onto a scren next section must come before count increments to next
 	let bottom = 0.9; // how far from bottom of screen fixed area ends
 
+
+	let menu = 1;
+
+	const setMenu = (val) => {
+		menu = val;
+	};
 </script>
+
+<NavBar {setMenu} />
+{#if menu === 1}
+	<Chapter1 />
+{:else if menu === 2}
+	<Chapter2 />
+{:else}
+	<h1>Page Not Found</h1>
+{/if}
+
 
 <main>
   
-  <Chapter1>
+
 	
-  </Chapter1>
 
 <style>
 	h2 {
@@ -32,7 +48,7 @@
 	}
 	
 	[slot="background"] {
-		background-color: rgba(255,62,0,0.05);
+		background-color: rgb(255,209,223);
 		border-top: 2px solid #ff3e00;
 		border-bottom: 2px solid #ff3e00;
 		overflow: hidden;
@@ -53,7 +69,7 @@
 	
 	section {
 		height: 80vh; /* make each scrolling "slide" 80% of the vertical screen height */
-		background-color: rgba(0,0,0,0.2);
+		background-color: rgb(225, 209, 223);
 		color: white;
 		padding: 1em;
 		margin: 0 0 1em 0;
