@@ -9,7 +9,9 @@
 		Chapter2,
 	];
 
-  import Scroller from './lib/Scroller.svelte';
+	//commented out the following because I turned Scroller into Scrolly? And merged what Scrolly does with Ch1??? I think? 
+
+	//import Scroller from './lib/DELETEScroller.svelte';
  
   let count;  // total sections in scroller
 	let index;  // which section number is currently active (starts at 1)
@@ -41,7 +43,6 @@
   
 
 	
-
 <style>
 	h2 {
 		margin: 0.5rem 0;	
@@ -85,23 +86,3 @@
 </style>
 
 </main>
-
-<!--
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
--->

@@ -1,4 +1,4 @@
-<script context="module">
+<!--<script context="module">
 	const handlers = [];
 	let manager;
 
@@ -219,4 +219,4 @@
 		-moz-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0); */
 	}
-</style>
+</style>-->
