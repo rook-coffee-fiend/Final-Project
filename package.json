@@ -14,6 +14,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "leaflet": "^1.9.4"
+    "@sveltejs/svelte-scroller": "^2.0.7",
+    "leaflet": "^1.9.4",
+    "svelte-scroller": "^1.2.2"
   }
 }

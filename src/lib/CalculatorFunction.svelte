@@ -112,7 +112,7 @@
 {/if}
 
 
-<!-- Holiday -->
+<!-- Holiday surcharge-->
 {#if careType}
   <div>
     <label for="isHoliday">Do the dates of pet-care fall during during a busy season and/or holiday weekend?</label>

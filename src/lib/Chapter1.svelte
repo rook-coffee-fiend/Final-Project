@@ -2,6 +2,7 @@
     import MapInfo from './MapInfo.svelte';
     import CalculatorFunction from './CalculatorFunction.svelte';
     import NavBar from './NavBar.svelte';
+    import NewScroller from './ScrollyContent.svelte';
 	
 
 </script>
@@ -18,6 +19,7 @@
 	It was isolating living in Jamaica Plain- I didn’t know anyone in my neighborhood! Even my new coworkers, who would eventually 
 	become close friends, lived out of practical reach. What was a girl to do?
 </p>
+
 
 <article class="scrollytelling-container">
 
@@ -73,10 +75,10 @@
 	</div>
 
 	
-	<div class="image-panel">
+	<!--<div class="image-panel">
   		<img src="Domino.jpg" alt="A girl smiles while she snuggles with a black cat" class="step-image"/>
-			<!--FIRST PICTURE HERE: GIDDY WITH BUNNY-->
-    </div>	
+			FIRST PICTURE HERE: GIDDY WITH BUNNY
+    </div>	-->
 
 </article>
 
@@ -86,18 +88,19 @@
 		<MapInfo/>
 	</section>
 
-	<section class="post-scrolly">
-		<p> 
-			 INTRODUCE MYSELF
-			<!--INTRODUCE MYSELF//AUTHOR & COMMUNITY STATEMENT-->
-		</p>
-		<p> 			
-			Want to work with Bethany? Details about sitting/rates/etc 
-			<br/>In bullet points below
-			<br/>And so on and so forth
-		</p>
-		<CalculatorFunction/>
-	</section>
+	
+	<p> 
+		 INTRODUCE MYSELF
+		<!--INTRODUCE MYSELF//AUTHOR & COMMUNITY STATEMENT-->
+	</p>
+	<p> 			
+		Want to work with Bethany? Details about sitting/rates/etc 
+		<br/>In bullet points below
+		<br/>And so on and so forth
+	</p>
+	
+	
+	<CalculatorFunction/>
 	
 
 <style>

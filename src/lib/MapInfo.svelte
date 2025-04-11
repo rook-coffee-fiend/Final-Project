@@ -9,13 +9,13 @@
     
     onMount(() => {
     // Create map instance
-    map = L.map('map').setView([42.313, 71.114], 13.5); // Set initial center and zoom
+    map = L.map('map').setView([42.313, -71.114], 15); // Set initial center and zoom
 
     // Add OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=t9bkmd7qurzKztaOujrN', {
         maxZoom: 18,
         minZoom: 10,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }).addTo(map);
 
 // Add a marker

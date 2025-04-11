@@ -1,5 +1,6 @@
 <script>
 	import { reviews } from './reviews.js';
+	
 	let flippedCards = new Set();
 
 	//const reviews = Array.from({ length: 12 }, (_, i) => ({
@@ -56,7 +57,7 @@
 	}
 
 	.flip-box {
-		width: 200px;
+		width: 265px;
 		min-height: 300px;
 		perspective: 1000px;
 		cursor: pointer;
@@ -77,7 +78,7 @@
 
 	.flip-box-inner.show-back {
 		transform: rotateY(180deg);
-		/*height: auto;*/
+		height: auto;
 	}
 
 	.flip-box-front,

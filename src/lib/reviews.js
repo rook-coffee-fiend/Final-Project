@@ -1,11 +1,26 @@
 // credit to https://svelte.dev/playground/dbdad7821bff445ab806fa608a6aac9f?version=5.25.6
 
+//import Alix from './assets/Alix.jpg';
+//import Buddy from './assets/Buddy.jpg';
+//import Herbie from './assets/Herbie.jpg';
+//import JasperI from './assets/Jasper & Pooky.jpg';
+//import JasperII from './assets/Jasper II.jpg';
+//import Moose from './assets/Moose.jpg';
+//import Nanette from './assets/Nanette.jpg';
+//import Nugget from './assets/Nugget.jpg';
+//import Peta from './assets/Peta.jpg';
+//import Pounce from './assets/Pounce V1.jpg';
+//import Stevie from './assets/Stevie.jpg';
+//import Toula from './assets/Toula.jpg';
+//import Wally from './assets/Wally.jpg';
+
+
 export const reviews = [
     {
         id: 0,
           name: "Emily & Julian",
           descr: "Buddy, Buffy, & Felix's parents",
-          img: ""	, 
+          img: "", 
           review: "Buddy is the most handsomest man in the whole world. Felix is a food goblin who will eat through plastic to get at anything remotely edible, and Buffy has to be kept away from Buddy or she'll try to fight him."
       },
     {
