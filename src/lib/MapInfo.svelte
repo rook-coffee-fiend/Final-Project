@@ -14,7 +14,7 @@
     // Add OpenStreetMap tile layer
     L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=t9bkmd7qurzKztaOujrN', {
         maxZoom: 18,
-        minZoom: 10,
+        minZoom: 15,
         attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }).addTo(map);
 
@@ -30,12 +30,15 @@
 </script>
 
 
+<div id="map">
+  
+</div>
+
+
+
 <style>
   #map {
-    height: 50px; /* Set the height of the map */
-    width: 50%;
+    height: 500px; /* Set the height of the map */
+    width: 50vw; /* Set the width of the map */
   }
 </style>
-
-<div id="map"></div>
-

@@ -49,7 +49,7 @@
 
 
 <!-- Type of Care -->
-<div>
+<div class="selection">
   <label for="careType">Would you prefer to have overnights, or drop-in visits?</label>
   <select id="careType" bind:value={careType}>
     <option value="" disabled selected>Select one</option>
@@ -60,7 +60,7 @@
 
 <!-- Common Fields -->
 {#if careType}
-  <div>
+  <div class="selection">
     <label for="meds">Does your pet need medication administered- such as insulin injections, inhalers, or pills?</label>
     <select id="meds" bind:value={meds}>
       <option value="" disabled selected>Select</option>
@@ -74,7 +74,7 @@
     <input id="petCount" type="number" min="1" bind:value={petCount} />
   </div>
 
-  <div>
+  <div class="selection">
     <label for="behavior">Does your pet exhibit aggression, pica compulsions, or other special-needs behaviors?</label>
     <select id="behavior" bind:value={behavior}>
       <option value="" disabled selected>Select</option>
@@ -95,7 +95,7 @@
 
 <!-- Drop-in-Specific -->
 {#if careType === 'dropins'}
-  <div>
+  <div class="selection">
     <label for="visitsPerDay">How many visits <strong>per day</strong> do you anticipate needing?</label>
     <select id="visitsPerDay" bind:value={visitsPerDay}>
       <option value="" disabled selected>Select</option>
@@ -114,7 +114,7 @@
 
 <!-- Holiday surcharge-->
 {#if careType}
-  <div>
+  <div class="selection">
     <label for="isHoliday">Do the dates of pet-care fall during during a busy season and/or holiday weekend?</label>
     <select id="isHoliday" bind:value={isHoliday}>
       <option value="" disabled selected>Select</option>
@@ -130,3 +130,25 @@
 <div>
   <p>Pet care estimate: ${sum}</p>
 </div>
+
+
+<style>
+  div{
+    font-size: 1.1rem;
+  }
+  
+
+  input{
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  select{
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 0.15rem;
+  }
+
+</style>

@@ -20,4 +20,4 @@ TO DO       STYLE:
                 background- make pink
                 Navbar- order: should be after header image and h2 tital
                 review cards (make rows shift down when card is expanded)
-                Bootstrap to format- medium 6
+                Bootstrap to format text narrower- medium 6

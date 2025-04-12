@@ -20,8 +20,6 @@
 	}
 </script>
 
-<h1>Read Some Reviews!</h1>
-
 <div class="grid">
 	{#each reviews as { id, name, descr, img, review }}
 		<button class="flip-box" on:click={() => toggleCard(id)} on:keydown={(e) => e.key === 'Enter' && toggleCard(id)} aria-label="Toggle review card">
@@ -42,7 +40,7 @@
 </div>
 
 <style>
-	h1 {
+	h2 {
 		text-align: center;
 		margin-bottom: 1rem;
 	}
@@ -55,6 +53,7 @@
 		justify-items: center;
 		padding: 0 1rem;
 	}
+	
 
 	.flip-box {
 		width: 265px;
@@ -62,6 +61,8 @@
 		perspective: 1000px;
 		cursor: pointer;
 		transition: height 0.4s ease;
+		background-color: rgba(203, 249, 195, 0.5);
+		border-color: rgba(255, 255, 255, 0.5);
 	}
 
 	/*.flip-box.expanded {
@@ -93,7 +94,7 @@
 	}
 
 	.flip-box-front {
-		background: rgb(185, 215, 223);
+		background: rgb(255, 255, 255);
 	}
 
 	.flip-box-front img {
@@ -103,7 +104,7 @@
 	}
 
 	.flip-box-back {
-		background-color: #75ba8c;
+		background-color: #cbf9c3;
 		color: black;
 		transform: rotateY(180deg);
 		display: flex;

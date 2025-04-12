@@ -78,15 +78,15 @@
 	export let visible = false;
 
 	let outer;
-	let foreground;
-	let background;
+	let foreground; //article is foreground
+	let background; //cat images are background
 	let left;
 	let sections;
-	let wh = 0;
+	let wh = 0; 
 	let fixed;
-	let offset_top = 0;
+	let offset_top = 0; 
 	let width = 1;
-	let height;
+	let height; 
 	let inverted;
 
 	$: top_px = Math.round(top * wh);
@@ -177,9 +177,11 @@
 	</svelte-scroller-background-container>
 
 	<svelte-scroller-foreground bind:this={foreground}>
-		<slot name="foreground"></slot>
+		<slot name="foreground"></slot> <!--foreground = article-->
 	</svelte-scroller-foreground>
 </svelte-scroller-outer>
+
+
 
 <style>
 	svelte-scroller-outer {
@@ -194,15 +196,15 @@
 	}
 
 	svelte-scroller-foreground {
-		display: block;
+		display: block; /* this is the scrolling content */
 		position: relative;
-		z-index: 2;
+		z-index: 2; /* foreground (ARTICLE) is on top of background */
 	}
 
 	svelte-scroller-foreground::after {
-		content: ' ';
-		display: block;
-		clear: both;
+		content: ' '; 
+		display: block; 
+		clear: both; 
 	}
 
 	svelte-scroller-background-container {
