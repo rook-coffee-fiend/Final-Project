@@ -1,7 +1,7 @@
 <script>
   import Chapter1 from './lib/Chapter1.svelte';
   import Chapter2 from './lib/Chapter2.svelte';
-    import Footer from './lib/Footer.svelte';
+  import Footer from './lib/Footer.svelte';
   import NavBar from './lib/NavBar.svelte';
 
 

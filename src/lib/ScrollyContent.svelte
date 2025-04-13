@@ -1,5 +1,10 @@
 <script>
-	import Scroller from './Scroller.svelte'; //
+	import Scroller from './Scroller.svelte'; 
+
+	const images = [
+	'/Assets/GiddyBunny.jpg',
+	'/Assets/PounceWantsIn.jpg'
+];
 	
 	let count;  // total sections in scroller
 	let index;  // which section number is currently active (starts at 1)
@@ -25,9 +30,10 @@
 
 	<!-- the FIXED layer of the scroller -->
 	<!-- the margin here is a key way to determine overlay vs. side-by-side -->
-	<div slot="background" style="margin: 0 0 0 50%;"> <!--static image frame for cat; set to righthand side of screen -->
-		<h2>Cat Image {index}</h2>
-			</div>
+	
+	<div slot="background" class="background-image" style="margin: 0 0 0 50%;"> <!--static image frame for cat; set to righthand side of screen -->
+		<img src={images[index-1]} alt={`Image of cat ${index}`} />
+	</div>
 
 	<!-- the SCROLLING layer of the scroller -->
 	<!-- the padding here is a key way to determine overlay vs. side-by-side -->
@@ -97,16 +103,13 @@
 
 
 <style>
-	h2 {
-		margin: 0.5rem 0;	
-	}
-	
+	/* the background image is fixed in place, so it doesn't scroll with the text */	
 	[slot="background"] {
 		background-color: rgb(115, 149, 207); /*cat image background color*/
 		border: 2px solid #ffffff; /*cat image border color*/
 		overflow: hidden; 
 		padding: 1em; 
-		position: fixed; /*fixes the background image in place*/
+		/*position: fixed; fixes the background image in place*/
 	}
 
 	/* allow ONLY the <section> tags to receive clicks, hovers, and other points events */
@@ -117,7 +120,30 @@
 		}
 	}
 	
+		
+	/*.background-image {
+		/*CONTAINER/BACKGROUND*/
+	/*position: fixed;*/
+	/*top: 50%; */
+	/*transform: translateY(-50%); */
+	/*right: 0; */
+	/*width: 25%; */
+	/*height: auto;*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+	/*padding: 1rem;*/
+	/*background-color: rgb(115, 149, 207);*/
+	/*border: 2px solid #ffffff}*/
 
+
+.background-image img {
+	max-width: 100%;
+	max-height: 80vh;
+	object-fit: contain;
+	border-radius: 8px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
 		
 	section {
 		background-color: rgb(195,229,220); /* light green*/
