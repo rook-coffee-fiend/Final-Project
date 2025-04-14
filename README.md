@@ -15,10 +15,14 @@ STYLE:
         DONE    review cards (make rows shift down when card is expanded)
         DONE    but not with bootstrap lol Bootstrap to format text narrower- medium 6
 
+DONE!       Finish scrollytelling & corresponding picture changes (MOST IMPORTANT)
 
 
-80% DONE!   Article (MOST IMPORTANT)
-TO DO       Finish scrollytelling & corresponding picture changes (MOST IMPORTANT)
-TO DO       Tailor interactive map with highlighted streets
-TO DO       Style footer, also maybe header (least important)
-                
+
+95% DONE!   Article (MOST IMPORTANT)
+TO DO       Fix link to reviews page in Chapter1
+TO DO       Check accessibility & add captions/alt text for pop-up images in scrollyteller
+
+TO DO       Style calculator function, footer, and maybe header (least important)
+
+TO DO       Tailor interactive map with highlighted streets (Prof Bhargava says if I need to drop something, drop this part.)                

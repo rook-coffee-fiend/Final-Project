@@ -30,12 +30,21 @@
 
 <article>
 	<p> 
-		INTRODUCE MYSELF
+		I hope you enjoyed this little tour of our corner of the Jamaica Plain community! Thank you to everyone who shared their 
+		stories, provided quotes, and sent photos my way for the creation of this piece. 
 		<br/>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-		aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-		occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<br/>
+		JP's cat lovers have not only helped me feel at home in Boston, but through supporting my pet care business, they've 
+		allowed me to support myself through grad school.
+		This article (and this website!) was one of the last hurdles to clear before I graduate in May- I created it for my 
+		final project in <a href="https://camd.northeastern.edu/people/rahul-bhargava/">Professor Rahul Bhargava</a>'s 
+		<i>Coding for Digital Storytelling</i> course. 
+		<br/>
+		<br/>
+		Though I'm about to graduate and am looking for a full-time job, I haven't yet recieved any offers. And once I do 
+		secure full-time employment, I have no intention of leaving cat-sitting behind. I love my clients- both the fuzzies 
+		and the humans! If you'd like to learn more about my pet care services, please check out some reviews, 
+		interact with the rate calculator below, or contact me directly <a href="bethanyward221@gmail.com" target="_blank"> via email</a>!
 	</p>
 	
 </article>
@@ -49,8 +58,10 @@
 
 <style>
 	article {
+		margin-top: 2rem;
 		margin-left: 8rem;
 		margin-right: 8rem;
+		margin-bottom: 5rem;
 	}
 	
  	p{
@@ -58,7 +69,7 @@
 		padding: 0, 0, 0, 0;
 	}
 
-/*RE-INTEGRATE MAP SECTION?*/
+/*RE-INTEGRATE MAP SECTION IF I HAVE TIME.*/
 
 /*	.map-section {
 	  padding: 4rem 2rem;

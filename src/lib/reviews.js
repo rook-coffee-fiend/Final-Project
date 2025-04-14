@@ -1,6 +1,6 @@
 // credit to https://svelte.dev/playground/dbdad7821bff445ab806fa608a6aac9f?version=5.25.6
 
-import Alix from '$assets/Alix.jpg';
+import PierreSink from '$assets/PierreSink.jpg';
 import Buddy from '$assets/Buddy.jpg';
 import Herbie from '$assets/Herbie.jpg';
 import JasperI from '$assets/Jasper & Pooky.jpg';
@@ -73,10 +73,10 @@ export const reviews = [
       },
       {
         id: 8,
-          name: "Meet Alix", //Julia and Val
-          descr: "A fuzzy ball of energy", //Alix's humans
-          img: Alix, 
-          review: "The only thing keeping Alix from being a full-time lap cat is his boundless energy! He likes to run around the apartment chasing toys, hide inside his crinkly tube after a running start, and survey his kingdom while sitting in positions that look like they couldn't possibly be comfortable."
+          name: "Meet Pierre", //Linds & Lee
+          descr: "A fuzzy ball of energy", //Pierre's humans
+          img: PierreSink, 
+          review: ""
       },
       {
         id: 9,
