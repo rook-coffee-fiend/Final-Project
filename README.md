@@ -14,6 +14,7 @@ STYLE:
         DONE    Navbar- order: should be after header image and h2 tital
         DONE    review cards (make rows shift down when card is expanded)
         DONE    but not with bootstrap lol Bootstrap to format text narrower- medium 6
+        DONE    Remove green backing from scrolly article 
 
 DONE!       Finish scrollytelling & corresponding picture changes (MOST IMPORTANT)
 

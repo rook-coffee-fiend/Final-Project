@@ -41,8 +41,9 @@ h1 {
 
 #app {
   max-width: 1280px;
-  margin: auto;
-  padding: 2rem;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-top: 0rem;
   text-align: left;
 }
 
@@ -72,7 +73,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #0c1e2e; /*text color*/
-    background-color: #fff1ff; /*Background color of whole page*/
+    background-color: #fdf8fd; /*Background color of whole page*/
   }
   a:hover {
     color: #00c2e0; /*navbar links hover color*/

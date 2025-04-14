@@ -271,7 +271,7 @@
 			
 	.background-image { /*CONTAINER/BACKGROUND*/
 		margin-top: 5rem;
-		padding: 1rem; 
+		padding: 1em; 
 		position: fixed;
 		/*top: 50%; 
 		transform: translateY(-50%); */
@@ -298,25 +298,24 @@
 	}
 		
 	section {
-		background-color: rgb(195,229,220); /* light green*/
+		/*background-color: rgb(195,229,220); /* light green background for the initial codign phase*/
 		height: auto; /* make each scrolling "slide" 80% of the vertical screen height */
 		width: 90%;
 		color: rgb(0, 0, 0); /*text color*/
-		padding: 1rem;
-		/*margin: top right bottom left;*/
+		/*padding: 0rem;*/
 		margin-top: 5rem;
 		margin: 0 0 1rem 3.5rem; /* margin at the top, right, bottom, left; adds split between sections*/
 		padding-top: 1rem;
 
 		p {
-			font-size: 18px; /*font size*/
+			font-size: 1.13em; /*font size*/
 			max-width: 90%; 
 			/*background-color: rgba(14, 90, 255, 0.15); background to paragraph color*/
-			padding: 1rem;
-			margin-top: 1rem; /*it's 5% below the top of the section*/
-			margin-left: 1rem; /* center it horizontally */
-			margin-bottom: 1rem; /* margin at the bottom*/
+			margin-top: 3rem; /*it's 5% below the top of the section*/
+			margin-left: 1rem; 
+			margin-bottom: 0rem; 
 			margin-right: 1rem;
+			padding: 0rem;
 		}
 	}
 </style>

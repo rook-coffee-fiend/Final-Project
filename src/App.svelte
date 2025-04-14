@@ -41,11 +41,11 @@
 		}
 		
 		[slot="background"] { /*right side*/
-			background-color: #030000;/*unclear where this goes*/
+			background-color: #030000;/*unclear where this goes. likely overruled across the board lol*/
 			border-top: 2px solid #ff3e00;
 			border-bottom: 2px solid #ff3e00;
 			overflow: hidden;
-			padding: 1em;
+			/*padding: 1em;*/
 			p {
 				margin: 0;
 				font-size: 1.1rem;

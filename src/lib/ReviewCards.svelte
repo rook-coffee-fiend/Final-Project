@@ -34,26 +34,29 @@
 
 <div class="grid">
 	{#each reviews as { id, name, descr, img, review }}
-	<button
-		class="flip-box"
-		style="height: {flippedCards.has(id) ? `${cardHeights[id] || 295}px` : '295px'}"
-		on:click={() => toggleCard(id)}
-		on:keydown={(e) => e.key === 'Enter' && toggleCard(id)}
-		aria-label="Toggle review card"
-	>
-			<div class="flip-box-inner {flippedCards.has(id) ? 'show-back' : ''}">
-				<div class="flip-box-front">
-					<img src={img} alt="Review by {name}" />
-				</div>
+	<div class="card-wrapper">
+		<h3 class="cat-name">Read about {name}:</h3>
+		<button
+			class="flip-box"
+			style="height: {flippedCards.has(id) ? `${cardHeights[id] || 295}px` : '295px'}"
+			on:click={() => toggleCard(id)}
+			on:keydown={(e) => e.key === 'Enter' && toggleCard(id)}
+			aria-label="Toggle review card"
+		>
+				<div class="flip-box-inner {flippedCards.has(id) ? 'show-back' : ''}">
+					<div class="flip-box-front">
+						<img src={img} alt="Review by {name}" />
+					</div>
 
-				<div class="flip-box-back" id={"card-back-" + id}>
-					<h2>{name}!</h2>
-					<p class="descr">{descr}</p>
-					<p>{review}</p>
-				</div>
+					<div class="flip-box-back" id={"card-back-" + id}>
+						<h2>{name}!</h2>
+						<p class="descr">{descr}</p>
+						<p>{review}</p>
+					</div>
 
-			</div>
-		</button>
+				</div>
+			</button>
+		</div>
 	{/each}
 </div>
 
@@ -67,15 +70,21 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr); /* max 4 cards per row */
 		grid-auto-rows: minmax(300px, auto); /* min height of 300px, auto height for larger content */
-		gap: 24px; /* consistent padding between cards */
+		gap: 2em; /* consistent padding between rows */
 		justify-items: center;
-		padding: 0 1rem; 
 		align-items: start;
 	}
 
+	.card-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.flip-box {
-		width: 275px; /*width of backing button*/
-		min-height: 330px; /* Ensure button is at least as tall as front */
+		width: 100%; /*width of backing button*/
+		max-width: 320px; /* max width of backing button */
+		min-height: 340px; /* Ensure button is at least as tall as front */
 		perspective: 1000px; /* Perspective for 3D effect */
 		padding-top: 5%;
 		align-items: start; 
@@ -108,7 +117,7 @@
 	}
 
 	.flip-box-front { /* Frame for picture of cat! */
-		height: 295px;
+		height: 305px;
 		width: 100%;
 		background: rgb(255, 255, 255);
 	}
@@ -151,17 +160,17 @@
 	}
 
 	/* Responsiveness - max 4 down to 1 */
-	@media (max-width: 1100px) {
+	@media (max-width: 1375px) {
 		.grid {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 1040px) {
 		.grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 705px) {
 		.grid {
 			grid-template-columns: 1fr;
 		}

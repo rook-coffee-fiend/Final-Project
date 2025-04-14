@@ -5,13 +5,13 @@
 
 
 <div>
-    <h3>Read Some Reviews!</h3>
+    <h3>Reviews and local cat lore!</h3>
 
     <p>
         Curious about others' experience working with Bethany? 
         Interested in learning more about her services? 
-        Just want to see some pictures of inside cats from the neighborhood? 
-        Check out the reviews below!
+        Just want to see some more pictures of local cats? 
+        Click on a cat to check out some reviews below!
         <br/>
     </p>
 </div>
@@ -31,6 +31,7 @@
     h3{
         font-size: 22px;
     }
+
     p {
         font-size: 18px;
     }
