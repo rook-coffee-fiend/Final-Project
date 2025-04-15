@@ -2,18 +2,23 @@
 	import Scroller from './Scroller.svelte'; 
 
 	const images = [
-	'/CatsofJPFacebook.png',
-	'/CatsofJPFacebook.png',	
-	'/MysteryOutside.jpg',
-	'/GiddyBunny.jpg',
-	'/GiddyBunny.jpg',
-	'/GiddyBunny.jpg',
-	'/PounceWantsIn.jpg',
-	'/PounceWantsIn.jpg',
-	'/bird.jpg',
-	'/FitziOutside.jpg',
-	'/PierreOutside.jpg',
-	'/NiaOutside.jpg',
+	{src: '/CatsofJPFacebook.png', alt:'Image is a screenshot of a facebook group home page. The theme picture is a photo of an orange and black cat curiously sniffing a purple flower', 
+	 	caption: 'The landing page for the Cats of Jamaica Plain Facebook group.'},
+	{src: '/CatsofJPFacebook.png', alt:'', 
+		caption: 'The landing page for the Cats of Jamaica Plain Facebook group.'},
+	{src: '/MysteryOutside.jpg', alt:'A grey-ish cat sits on the sidewalk with her back to the camera. She practically blends in with the cement and pavement around her', 
+		caption: 'This is a mystery cat I ran into soon after I moved to Boston.'},
+	{src: '/GiddyBunny.jpg', 
+		alt:'A black cat lays down facing the camera on a bed of mulch and flower petals. Next to him sits a young bunny. The two are touching and seem quite content to snuggle peacefully.', 
+		caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
+	{src: '/GiddyBunny.jpg', alt:'', caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
+	{src: '/GiddyBunny.jpg', alt:'', caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
+	{src: '/PounceWantsIn.jpg', alt:'A cat with black and white spots like a cow looks in through a sliding glass door expectantly. A floral patterned chair in the foreground slightly obscures the view.', caption: 'The mayor of Jamaica Plain is paying his constituents a visit. [Picture credit: Erica Desautels]'},
+	{src: '/PounceWantsIn.jpg', alt:'', caption: 'The mayor of Jamaica Plain is paying his constituents a visit. [Picture credit: Erica Desautels]'},
+	{src: '/bird.jpg', alt:'An tastefully bloodless close-up of a tabby cat holding a songbird in its mouth, framed by out of focus greenery.', caption: 'Cats kill an estimated 2.4 billion birds in the United States alone each year.'},
+	{src: '/FitziOutside.jpg', alt:'Two tortoise shell cats sit outside on a brick patio, with their backs to the camera. The left cat is sitting in a loaf, and the red leash tethering it to safety is clearly visible. The cat on the right side doesn\t have a visible leash, but her pink collar is visible as she sits in profile.', caption: 'Fifi and Mitzi enjoy their outside time, even on cloudier days like this one.'},
+	{src: '/PierreOutside.jpg', alt:'A one-eyed, grey Maine Coon cat lounges happily on a portable plastic staircase. He is outside on a porch, up against the house\s siding. The sky is a clear blue and the sun is strong.', caption: 'Pierre LOVES his porch.'},
+	{src: '/NiaOutside.jpg', alt:'An orange cat standing on a cobblestone walkway scattered with leaves looks to the left, distracted from the photographer she was approaching.', caption: 'This is one of Giddy\s indoor-outdoor neighbors, Nia!'},
 
 ];
 	
@@ -43,7 +48,8 @@
 	<!-- the margin here is a key way to determine overlay vs. side-by-side -->
 	
 	<div slot="background" class="background-image"> <!--style="margin: 5% 0 0 50%--> <!--static image frame for cat; set to righthand side of screen -->
-		<img src={images[index]} alt={`Image of cat ${index}`} />
+		<img src={images[index]?.src} alt={images[index]?.alt} />
+			<p class="caption">{images[index]?.caption}</p>
 	</div>
 
 	<!-- the SCROLLING layer of the scroller -->
@@ -301,6 +307,18 @@
 		object-fit: cover; /*maintain aspect ratio! */
 		border-radius: 12px;
 		box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+	}
+
+	.caption {
+		position: absolute;
+		bottom: 0.25rem; /* position it at the bottom of the image */
+		left: 1rem; /* position it at the left of the image */
+		font-size: 0.75rem;
+		color: black;
+		background-color: rgba(255, 255, 255, 0.7); /* transparent black */
+		padding: 0.25rem 0.5rem;
+		border-radius: 6px;
+		max-width: 90%;
 	}
 		
 	section {

@@ -33,7 +33,7 @@
 </script>
 
 <div class="grid">
-	{#each reviews as { id, name, descr, img, review }}
+	{#each reviews as { id, name, descr, img, alt, review }}
 	<div class="card-wrapper">
 		<h3 class="cat-name">Read about {name}:</h3>
 		<button
@@ -45,7 +45,7 @@
 		>
 				<div class="flip-box-inner {flippedCards.has(id) ? 'show-back' : ''}">
 					<div class="flip-box-front">
-						<img src={img} alt="Review by {name}" />
+						<img src={img} alt={alt || `Photo from ${name}`} />
 					</div>
 
 					<div class="flip-box-back" id={"card-back-" + id}>
