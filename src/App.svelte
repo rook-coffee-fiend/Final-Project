@@ -18,7 +18,9 @@
 </script>
 
 
-	<NavBar {setMenu} />
+<NavBar {setMenu} />
+
+<div id="app"> 	
 
 	{#if menu === 1}
 		<Chapter1 />
@@ -31,13 +33,15 @@
 	{/if}
 
 	<Footer/>
+</div>
 
 
-<main>
+
+<main>	
 	
 	<style>
 		h2 {
-			margin: 0.5rem 0;	
+			margin: 0.5rem 0; 
 		}
 		
 		[slot="background"] { /*right side*/
@@ -60,6 +64,14 @@
 			}
 		}
 		
+		.app {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width: 100%;
+		}
 		
 	</style>
 

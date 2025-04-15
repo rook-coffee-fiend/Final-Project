@@ -208,7 +208,9 @@
 				<br/>
 				<br/>
 				Even without the threat cars pose, there are coyotes and fishercats roaming Boston, and cats are not immune to 
-				getting lost, trapped, or injured if exploring on their own.
+				getting lost, trapped, or injured if exploring on their own. A new strain of bird flu has also popped up in the 
+				last few months that's shown to have a nearly 100% mortality rate in cats. The choice to allow a cat outside is 
+				not one to make lightly.
 			</p>
 		</section>
 
@@ -240,7 +242,10 @@
 
 		<section>
 			<p>
-				CONCLUDING PARAGRAPH ABOUT HOW CATS ARE GREAT AND SO IS JP
+				Whether yours is an indoor or outdoor cat, the most important thing is they have a loving, attentive human- one who 
+				considers their safety, health, and the safety and health of the neighborhood in which they live. Be kind to your 
+				cats, and be kind to each other. We are what make Jamaica Plain the community it is, and in these ever-increasingly 
+				turbulent times, I'd hazard to say it does us good to remember that.
 			</p>
 		</section>
 		
@@ -252,7 +257,7 @@
 
 <style>
 	/* allow ONLY the <section> tags to receive clicks, hovers, and other points events */
-		[slot="foreground"] {
+	[slot="foreground"] {
 		pointer-events: none;
 		section {
 			pointer-events: all;
@@ -272,22 +277,23 @@
 	.background-image { /*CONTAINER/BACKGROUND*/
 		margin-top: 5rem;
 		padding: 1em; 
+		margin-right: 8em;right: 0; /* position it on the right side of the screen */
 		position: fixed;
+
 		/*top: 50%; 
 		transform: translateY(-50%); */
-		right: 0; /* position it on the right side of the screen */
 		width: 30rem; 
 		height: 30rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		
 		background-color: rgb(115, 149, 207);
 		border: 2px solid #cec9c9;
 		border-radius: 12px;
 		box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 
 	}
-
 
 	.background-image img { /*image itself*/
 		width: 31vw;
@@ -302,15 +308,13 @@
 		height: auto; /* make each scrolling "slide" 80% of the vertical screen height */
 		width: 90%;
 		color: rgb(0, 0, 0); /*text color*/
-		/*padding: 0rem;*/
-		margin-top: 5rem;
-		margin: 0 0 1rem 3.5rem; /* margin at the top, right, bottom, left; adds split between sections*/
-		padding-top: 1rem;
+		margin: 0 0 0 3.5em; /* margin at the top, right, bottom, left; adds split between sections*/
 
 		p {
 			font-size: 1.13em; /*font size*/
 			max-width: 90%; 
 			/*background-color: rgba(14, 90, 255, 0.15); background to paragraph color*/
+			
 			margin-top: 3rem; /*it's 5% below the top of the section*/
 			margin-left: 1rem; 
 			margin-bottom: 0rem; 

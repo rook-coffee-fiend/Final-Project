@@ -14,22 +14,21 @@
 
 <style>
     article {
-        background-color: rgb(223, 250, 255);
-        color: black;
+        background-color: rgb(65, 79, 81);
+        color: white;
         overflow: hidden;
         padding-top: 1em;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 5em;
+        padding-right: 5em;
         padding-bottom: 1em;
         width: 100%
     }
     a {
-        color: #7a008a;
+        color: #e475d3;
         text-decoration: underline;
     }
     a:hover {
-    color: #00c2e0; /*links hover color*/
-    text-decoration: underline;
+        color: #eba6f4; /*links hover color*/
+        text-decoration: underline;
     }
-
 </style>

@@ -41,35 +41,56 @@
 		<i>Coding for Digital Storytelling</i> course. 
 		<br/>
 		<br/>
-		Though I'm about to graduate and am looking for a full-time job, I haven't yet recieved any offers. And once I do 
-		secure full-time employment, I have no intention of leaving cat-sitting behind. I love my clients- both the fuzzies 
-		and the humans! If you'd like to learn more about my pet care services, please check out some reviews, 
-		interact with the rate calculator below, or contact me directly <a href="bethanyward221@gmail.com" target="_blank"> via email</a>!
+		Though I'm about to graduate and am looking for a full-time job, I haven't yet recieved any offers. If there's a job 
+		opening at your company and you think I'd be a good fit, let me know and I'll apply! Though for any current clients 
+		reading this, fret not- once I do secure full-time employment, I have no intention of leaving cat-sitting behind. 
+		<br/>
+		<br/>
+		If you'd like to learn more about my pet care services, please <a href="">check out some reviews </a>, 
+		interact with the rate calculator below, or contact me directly <a href="bethanyward221@gmail.com" target="_blank"> via email</a>.
 	</p>
 	
 </article>
 
-<article>
+<article class="calculator-section">
 	<p> 			
-		Want to work with Bethany? See the interactive estimation feature below, or go to the bottom of the page for contact information. 
+		Want to work with Bethany? See the <b>interactive calculator feature</b> below to get an estimate for pet care, or go to the bottom of the page for her contact information. 
 	</p>
 	<CalculatorFunction/>
 </article>
 
+
 <style>
 	article {
 		margin-top: 2rem;
-		margin-left: 8rem;
-		margin-right: 8rem;
-		margin-bottom: 5rem;
+		margin-left: 10em;
+		margin-right: 10em;
+		margin-bottom: 3.5rem;
 	}
 	
  	p{
+		color: rgb(0, 0, 0);
 		font-size: 1.1rem;
 		padding: 0, 0, 0, 0;
 	}
 
+	.calculator-section {
+		background-color: rgba(113, 1, 1, 0.4);
+		border-radius: 16px;
+
+		font-weight: 500;
+
+		padding: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		margin-left: 4rem;
+		margin-right: 4rem;
+	}
+
+
 /*RE-INTEGRATE MAP SECTION IF I HAVE TIME.*/
+
+/*Narrator: She did not, in fact, have time.*/
 
 /*	.map-section {
 	  padding: 4rem 2rem;

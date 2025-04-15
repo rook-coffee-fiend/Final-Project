@@ -5,7 +5,7 @@
 
 
 <div>
-    <h3>Reviews and local cat lore!</h3>
+    <h3>Reviews (and local cat lore!)</h3>
 
     <p>
         Curious about others' experience working with Bethany? 

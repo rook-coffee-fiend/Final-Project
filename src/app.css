@@ -13,13 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff; /* link text color */
-  text-decoration: inherit;
-}
-a:hover {
-  color: #53f285;
+#app {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  justify-content: center;
 }
 
 body {
@@ -28,6 +26,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll until I find & fix the root cause */ /*I couldn't find it so this stays as a workaround*/
+}
+
+a {
+  font-weight: 500;
+  color: #646cff; /*auto link text color */
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #53f285;
 }
 
 h1 {
@@ -38,15 +47,6 @@ h1 {
 .card {
   padding: 2em;
 }
-
-#app {
-  max-width: 1280px;
-  margin-left: 5em;
-  margin-right: 5em;
-  padding-top: 0rem;
-  text-align: left;
-}
-
 
 button {
   border-radius: 12px;
@@ -60,11 +60,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border: 2px solid #9d0b79;
   border-color: #9d0b79;
   color: #9d0b79; /*button text color*/
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

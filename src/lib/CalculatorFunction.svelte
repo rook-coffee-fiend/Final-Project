@@ -127,28 +127,45 @@
 
 <button on:click={calculateEstimate}>Calculate</button>
 
-<div>
+<div class="result">
   <p>Pet care estimate: ${sum}</p>
 </div>
 
 
 <style>
-  div{
+  div {
     font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
   }
   
+  button {
+    margin-top: 1rem;
+  }
 
-  input{
+  input {
     font-size: 1rem;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
 
-  select{
+  select {
     font-size: 1rem;
     border-radius: 2px;
     border: 1px solid #ccc;
     padding: 0.15rem;
   }
+  
+ .result {
+    background-color: #e3e7ba;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 28px;
+
+    margin-top: 1rem;
+    padding-top: 0rem;
+    padding-left: 0.5rem;
+ }
 
 </style>
