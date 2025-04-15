@@ -3,6 +3,7 @@
     import CalculatorFunction from './CalculatorFunction.svelte';
     import ScrollyContent from './ScrollyContent.svelte';
 	
+	export let setMenu;
 
 </script>
 
@@ -46,8 +47,8 @@
 		reading this, fret not- once I do secure full-time employment, I have no intention of leaving cat-sitting behind. 
 		<br/>
 		<br/>
-		If you'd like to learn more about my pet care services, please <a href="">check out some reviews </a>, 
-		interact with the rate calculator below, or contact me directly <a href="bethanyward221@gmail.com" target="_blank"> via email</a>.
+		If you'd like to learn more about my pet care services, please <a href=" " on:click|preventDefault={() => setMenu(2)}>check out some reviews </a>, 
+		interact with the rate calculator below, or contact me directly <a href="mailto:bethanyward221@gmail.com"> via email</a>.
 	</p>
 	
 </article>

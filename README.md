@@ -16,6 +16,8 @@ STYLE:
         DONE    but not with bootstrap lol Bootstrap to format text narrower- medium 6
         DONE    Remove green backing from scrolly article 
 DONE!       Style calculator function, footer, and header to be less hideous
+DONE!       Fix link to Chapter2 page from Chapter1, fix email link
+
 
 DONE!       Finish scrollytelling & corresponding picture changes (MOST IMPORTANT)
 DONE!       Article (MOST IMPORTANT)
@@ -25,7 +27,6 @@ DONE!       Article (MOST IMPORTANT)
 
  
 
-TO DO       Fix link to Chapter2 page from Chapter1, fix email link
 TO DO       Check accessibility & add captions/alt text for pop-up images in scrollyteller
 
 

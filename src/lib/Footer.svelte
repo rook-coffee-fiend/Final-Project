@@ -4,7 +4,7 @@
         <br/>
         <br/>
 
-            <a href="bethanyward221@gmail.com" target="_blank">Send Bethany an email here</a>
+            <a href="mailto:bethanyward221@gmail.com">Send Bethany an email here</a>
         <br/>
             <a href="https://www.instagram.com/i_am_battleborn/" target="_blank">Instagram</a>
         <br/>

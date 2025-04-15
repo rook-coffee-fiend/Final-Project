@@ -1,4 +1,4 @@
-<script>
+<!--<script>
     import { onMount } from 'svelte';
     //from: https://leafletjs.com/examples/quick-start/
     import L from 'leaflet';
@@ -41,4 +41,4 @@
     height: 500px; /* Set the height of the map */
     width: 50vw; /* Set the width of the map */
   }
-</style>
+</style>-->

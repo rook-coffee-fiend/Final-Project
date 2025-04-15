@@ -23,7 +23,7 @@
 <div id="app"> 	
 
 	{#if menu === 1}
-		<Chapter1 />
+		<Chapter1 {setMenu}/>
 
 	{:else if menu === 2}
 		<Chapter2 />
