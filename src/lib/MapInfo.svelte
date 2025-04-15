@@ -1,4 +1,4 @@
-<!--<script>
+<!--<script> 
     import { onMount } from 'svelte';
     //from: https://leafletjs.com/examples/quick-start/
     import L from 'leaflet';
