@@ -3,11 +3,11 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 
 export default defineConfig({
+	base: '/Final-Project/',
 	plugins: [svelte()],
-	resolve: {
-		alias: {
-			$assets: path.resolve('./src/assets'),
-			$lib: path.resolve('./src/lib')
+	build: {
+		outDir: 'docs',
+		emptyOutDir: true
 		}
 	}
 });
