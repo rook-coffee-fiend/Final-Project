@@ -13,9 +13,7 @@
 		caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
 	{src: '/Final-Project/GiddyBunny.jpg', alt:'', caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
 	{src: '/Final-Project/GiddyBunny.jpg', alt:'', caption: 'This bunny is as safe as it gets: Giddy\'s well-fed, snuggly, and he doesn\'t have any teeth!'},
-	{src: '/Final-Project/PounceWantsIn.jpg', alt:'A cat with black and white spots like a cow looks in through a sliding glass door expectantly. A floral patterned chair in the foreground slightly obscures the view.', caption: 'The mayor of Jamaica Plain is paying his constituents a visit. [Picture credit: Erica Desautels]'},
-	{src: '/Final-Project/PounceWantsIn.jpg', alt:'', caption: 'The mayor of Jamaica Plain is paying his constituents a visit. [Picture credit: Erica Desautels]'},
-	{src: '/Final-Project/bird.jpg', alt:'An tastefully bloodless close-up of a tabby cat holding a songbird in its mouth, framed by out of focus greenery.', caption: 'Cats kill an estimated 2.4 billion birds in the United States alone each year.'},
+	{src: '/Final-Project/bird.jpg', alt:'An tastefully bloodless close-up of a tabby cat holding a songbird in its mouth, framed by out of focus greenery.', caption: 'Cats kill an estimated 2.4 billion birds in the United States alone each year. [Picture credit: American Bird Conservatory]'},
 	{src: '/Final-Project/FitziOutside.jpg', alt:'Two tortoise shell cats sit outside on a brick patio, with their backs to the camera. The left cat is sitting in a loaf, and the red leash tethering it to safety is clearly visible. The cat on the right side doesn\t have a visible leash, but her pink collar is visible as she sits in profile.', caption: 'Fifi and Mitzi enjoy their outside time, even on cloudier days like this one.'},
 	{src: '/Final-Project/PierreOutside.jpg', alt:'A one-eyed, grey Maine Coon cat lounges happily on a portable plastic staircase. He is outside on a porch, up against the house\s siding. The sky is a clear blue and the sun is strong.', caption: 'Pierre LOVES his porch.'},
 	{src: '/Final-Project/NiaOutside.jpg', alt:'An orange cat standing on a cobblestone walkway scattered with leaves looks to the left, distracted from the photographer she was approaching.', caption: 'This is one of Giddy\s indoor-outdoor neighbors, Nia!'},
@@ -162,44 +160,8 @@
 
 		<section>
 			<p>
-				<b>Pounce</b> is another notorious indoor/outdoor friendly. Affectionately known as the Mayor of JP, he’s got a 
-				reputation for waltzing into residents’ homes and making himself comfortable. There’s more than a handful 
-				of bemused posts in the Cats of JP group archive enquiring as to the nature of the visit- does he need help?? 
-				No, he’s just making the rounds.
-			<br/>
-			<br/>
-				His (perhaps overly) friendly demeanor has earned him dozens of fans across the neighborhood, but his hunting 
-				instincts have a few locals feeling miffed. 
-			</p>
-		</section>
-
-		<section>
-			<p>
-				When asked for comment, proud cat owner and local wildlife advocate, <b>Louise R.</b> had this to say: 
-				<br/>
-				<br/>
-				“I have mixed feelings about outdoor cats. My first cat enjoyed life outside; my second lives inside. I'm convinced 
-				that most cats are happier when they can explore outside, and that if presented with the choice of having a short life 
-				ended by a speeding car or fierce coyote, or a long safer life spent on a comfy chair, they would choose the former. 
-				But I'm also a protector of birds and small mammals, and I hate the depredations caused by housecats. 
-				<br/>
-				<br/>
-				One of my neighbors has a large outdoor cat, appropriately named Pounce, who roams around nearby streets and yards... 
-				Many neighbors love him because he will come inside and cuddle with anyone. But outside, he's a menace. 
-				<br/>
-				<br/>
-				When I first moved into my condo, twice I heard the heart-rending shriek of a baby rabbit in the backyard and looked out 
-				to see Pounce proudly trotting off with his prey. After that, whenever I saw Pounce coming through the fence into the 
-				yard, I would run after him, clapping my hands and yelling "Get out of here!" He would waddle quickly out of sight. Now, 
-				I merely have to come out on my deck and as soon as he spots me, he turns tail. I still call myself a cat-lover. 
-				But I'm not a Pounce-lover!”
-			</p>
-		</section>
-
-		<section>
-			<p>
-				Louise, a friend and client of mine, isn't wrong. According to the 
-				<a href="https://abcbirds.org/program/cats-indoors/cats-and-birds/">American Bird Conservancy</a>, 
+				Not every indoor-outdoor cat is this eco-friendly, though; in fact, Giddy seems to be something of a unicorn. 
+				According to the <a href="https://abcbirds.org/program/cats-indoors/cats-and-birds/">American Bird Conservancy</a>, 
 				outdoor domestic cats are a very present threat to biodiversity. From their website: 
 				<br/>
 				<br/>
@@ -213,9 +175,10 @@
 				wildlife, and for the cats themselves. 
 				<br/>
 				<br/>
-				Even without the threat cars pose, there are coyotes and fishercats roaming Boston, and cats are not immune to 
-				getting lost, trapped, or injured if exploring on their own. A new strain of bird flu has also popped up in the 
-				last few months that's shown to have a nearly 100% mortality rate in cats. The choice to allow a cat outside is 
+				Even without the threat cars pose, there are coyotes and fishercats roaming Boston. Rodenticide can sicken or even kill 
+				predators (like cats) that eat mice and rats that are ostensibly its true target. And cats are not immune to 
+				getting lost, trapped, or injured when exploring on their own. And, as if all that wasn't enough, new strain of bird flu has 
+				popped up in the last few months that's shown to have a nearly 100% mortality rate in cats. The choice to allow a cat outside is 
 				not one to make lightly.
 			</p>
 		</section>
